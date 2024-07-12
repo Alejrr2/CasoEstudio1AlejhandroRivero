@@ -1,0 +1,26 @@
+{
+  "name": "casodeestudiopractico_alejhandro-rivero",
+  "version": "1.0.0",
+  "description": "Caso de Estudio 1 Alejhandro Rivero",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Alejrr2/CasoEstudio1AlejhandroRivero.git"
+  },
+  "keywords": [
+    "Examen"
+  ],
+  "author": "Alejhandro Rivero Reyes",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Alejrr2/CasoEstudio1AlejhandroRivero/issues"
+  },
+  "homepage": "https://github.com/Alejrr2/CasoEstudio1AlejhandroRivero#readme",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "express": "^4.19.2"
+  }
+}

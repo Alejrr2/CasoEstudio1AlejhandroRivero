@@ -1,0 +1,71 @@
+/* Estilos generales para el cuerpo */
+body {
+    background-color: aqua; /* Fallback */
+    background-color: azure; /* Color de fondo principal */
+}
+
+/* Estilos para el encabezado */
+header {
+    background-color: rosybrown;
+    text-align: center;
+    padding: 20px;
+}
+
+header h1 {
+    color: white;
+}
+
+/* Estilos para el aside */
+aside {
+    float: left; /* Alineación a la izquierda */
+    width: 20%; /* Ancho del aside */
+    min-height: 850px; /* Altura mínima del aside */
+    padding: 20px;
+    background-color: lightgray;
+    /* Opcional: Añade margen superior e inferior si es necesario */
+    /* margin-top: 20px; */
+    /* margin-bottom: 20px; */
+}
+
+/* Estilo para el footer */
+footer {
+    background-color: rosybrown; 
+    text-align: center;
+    padding: 10px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+/* Estilos para la sección de notas */
+.notes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Columnas automáticas */
+    grid-gap: 20px; /* Espacio entre las notas */
+    padding: 20px;
+}
+
+/* Estilos para cada nota individual */
+.note {
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Configuraciones del boton */
+.add-button {
+    margin: 20px;
+    padding: 10px 20px;
+    background-color: skyblue;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .add-button:hover {
+    background-color: rosybrown;
+  }
+  .add-button:active {
+    background-color: green;
+  }
