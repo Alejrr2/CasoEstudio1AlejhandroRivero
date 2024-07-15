@@ -246,7 +246,7 @@ function renderNotes(notesToRender) {
         const noteHtml = `
             <div class="note" data-id="${nota.id}">
                 <h3>${nota.title}</h3>
-                <p><strong>Fecha:</strong> ${new Date(nota.date).toLocaleString()}</p>s
+                <p><strong>Fecha:</strong> ${new Date(nota.date).toLocaleString()}</p>
                 <h6>Última modificación: ${new Date(nota.dateModified).toLocaleString()}</h6>
                 <h5>Etiquetas: ${nota.tags}</h5>
                 <button class="modify-button" data-id="${nota.id}" onclick="showEditNoteModal(${nota.id})">Gestionar</button>
