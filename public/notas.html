@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Head en esta area se llama el link a bootstrapm para el area visual, adicional se llama al javascript y el css -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TusNotas.com</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="home.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script defer src="home.js"></script>
+</head>
+
+<body>
+    <!-- Header en esta area solo se hizo la implementación del titulo -->
+    <header>
+        <h1>TusNotas.com</h1>
+    </header>
+
+    <!-- Nav, en el nav se hace la llamada de la barra de busqueda junto a su boton -->
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: skyblue;"><!--Se establece el nav y su color-->
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <form class="form-inline" id="searchForm">  <!--Se crea un form donde se establece la barra de busqueda junto a su boton -->
+                <input class="form-control mr-sm-2" id="searchInput" type="search" placeholder="Buscar" aria-label="Buscar">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
+            </form>
+        </div>
+    </nav>
+    
+
+    <!-- Main, será donde aparacera el contenido principal de nuestra pagina -->
+    <main>
+        <button class="add-button" onclick="showAddNoteModal()">Agregar Nota</button> <!--Se establece el boton, junto al on click el cual será utilizado para abrir el modal-->
+         <section id="notesContainer" class="notes-grid"></section> <!--Se crea el section, que es donde se crearan las notas-->
+        <div id="messageContainer" class="alert" style="display: none;"></div> <!--Se llama al div que se utilizara para la alerta-->
+       
+        </main>
+
+    <!-- Se crea el modal para agregar nota -->
+    <div class="modal fade" id="addNoteModal" tabindex="-1" role="dialog" aria-labelledby="addNoteModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-md">
+            <div class="modal-content" style="background-color: rgba(81, 30, 164, 0.7); color: white;">
+                <div class="modal-header bg-black text-white">
+                    <h5 class="modal-title">Agregar Nota</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <form id="addNoteForm" method="POST" action="/add-note" class="was-validated">
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label for="title">Titulo</label>
+                            <input type="text" class="form-control" id="title" name="title" required maxlength="200">
+                        </div>
+                        <div class="form-group">
+                            <label for="content">Contenido</label>
+                            <input type="text" class="form-control" id="content" name="content" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="tags">Etiquetas</label>
+                            <input type="text" class="form-control" id="tags" name="tags" required maxlength="100">
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                        <button type="submit" class="btn btn-transparent"
+                            style="background-color: rgba(0, 0, 0, 1); color: white;">Guardar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Se crea el modal para editar nota -->
+    <div class="modal fade" id="editNoteModal" tabindex="-1" role="dialog" aria-labelledby="editNoteModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content" style="background-color: rgba(81, 30, 164, 0.7); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="editNoteModalLabel">Editar Nota</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <form id="editNoteForm" method="POST">
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label for="editTitle">Titulo</label>
+                            <input type="text" class="form-control" id="editTitle" name="title" required maxlength="200">
+                        </div>
+                        <div class="form-group">
+                            <label for="editContent">Contenido</label>
+                            <input type="text" class="form-control" id="editContent" name="content" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="editTags">Etiquetas</label>
+                            <input type="text" class="form-control" id="editTags" name="tags" required maxlength="100">
+                        </div>
+                        <input type="hidden" id="editNoteId" name="id">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                        <button type="button" class="btn btn-danger" id="deleteNoteButton">Eliminar</button>
+                        <button type="submit" class="btn btn-primary"
+                            style="background-color: rgba(0, 0, 0, 1); color: white;">Guardar Cambios</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

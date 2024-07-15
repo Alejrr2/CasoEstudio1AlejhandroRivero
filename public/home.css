@@ -1,7 +1,7 @@
 /* Estilos generales para el cuerpo */
 body {
-    background-color: aqua; /* Fallback */
-    background-color: azure; /* Color de fondo principal */
+    background-color: aqua;
+    background-color: azure; 
 }
 
 /* Estilos para el encabezado */
@@ -17,14 +17,11 @@ header h1 {
 
 /* Estilos para el aside */
 aside {
-    float: left; /* Alineación a la izquierda */
-    width: 20%; /* Ancho del aside */
-    min-height: 850px; /* Altura mínima del aside */
+    float: left;
+    width: 20%; 
+    min-height: 850px;
     padding: 20px;
     background-color: lightgray;
-    /* Opcional: Añade margen superior e inferior si es necesario */
-    /* margin-top: 20px; */
-    /* margin-bottom: 20px; */
 }
 
 /* Estilo para el footer */
@@ -36,15 +33,16 @@ footer {
     bottom: 0;
     width: 100%;
 }
-/* Estilos para la sección de notas */
+/* Estilos para las notas */
 .notes-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Columnas automáticas */
-    grid-gap: 20px; /* Espacio entre las notas */
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); 
+    grid-gap: 20px; 
     padding: 20px;
 }
 
-/* Estilos para cada nota individual */
+/* Estilos para cada nota */
+
 .note {
     background-color: #f0f0f0;
     padding: 10px;
@@ -53,7 +51,7 @@ footer {
 }
 
 
-/* Configuraciones del boton */
+/* Configuraciones del boton agregar */
 .add-button {
     margin: 20px;
     padding: 10px 20px;
@@ -69,3 +67,38 @@ footer {
   .add-button:active {
     background-color: green;
   }
+
+  /* Configuraciones del boton eliminar*/
+.delete-button {
+    margin: 20px;
+    padding: 10px 20px;
+    background-color: red;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .delete-button:hover {
+    background-color: salmon;
+  }
+  .delete-button:active {
+    background-color: salmon;
+  }
+
+    /* Configuraciones del boton modificar*/
+.modify-button {
+    margin: 20px;
+    padding: 10px 20px;
+    background-color: goldenrod;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .modify-button:hover {
+    background-color: yellow;
+  }
+  .modify-button:active {
+    background-color: yellow;
+  }
+
