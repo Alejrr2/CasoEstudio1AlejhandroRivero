@@ -16,46 +16,26 @@
 <body>
     <!-- Header en esta area solo se hizo la implementación del titulo -->
     <header>
-        <h1>
-            <h1>
-                <span class="Apela">Apela</span><span class="C">C</span><span class="R">R</span>
-              </h1>                      
+        <h1>TusNotas.com</h1>
     </header>
-    
+
     <!-- Nav, en el nav se hace la llamada de la barra de busqueda junto a su boton -->
-    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: gray"><!--Se establece el nav y su color-->
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" style="color: black;" href="#" >Destacados.</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" style="color: black;" href="/sobre">Sobre Nosotros</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" style="color: black;" href="/contactus">Contactenos</a>
-                </li>
-            </ul>
-        </div>
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: skyblue;"><!--Se establece el nav y su color-->
         <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
             <form class="form-inline" id="searchForm">  <!--Se crea un form donde se establece la barra de busqueda junto a su boton -->
                 <input class="form-control mr-sm-2" id="searchInput" type="search" placeholder="Buscar" aria-label="Buscar">
                 <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
             </form>
-            
         </div>
     </nav>
     
-    <aside>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque cupiditate et maxime. Natus deleniti dolor ullam eaque, possimus eos modi repellendus eligendi amet accusantium quos dignissimos aliquam temporibus commodi fugiat?</p>
-
-    </aside>
 
     <!-- Main, será donde aparacera el contenido principal de nuestra pagina -->
     <main>
         <button class="add-button" onclick="showAddNoteModal()">Agregar Nota</button> <!--Se establece el boton, junto al on click el cual será utilizado para abrir el modal-->
          <section id="notesContainer" class="notes-grid"></section> <!--Se crea el section, que es donde se crearan las notas-->
         <div id="messageContainer" class="alert" style="display: none;"></div> <!--Se llama al div que se utilizara para la alerta-->
+       
         </main>
 
     <!-- Se crea el modal para agregar nota -->
@@ -131,9 +111,5 @@
             </div>
         </div>
     </div>
-
-    <footer>
-        <p>&copy; 2024 ApelaCR. All rights reserved.</p>
-    </footer>
 </body>
 </html>

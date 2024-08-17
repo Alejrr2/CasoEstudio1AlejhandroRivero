@@ -1,18 +1,18 @@
 /* Estilos generales para el cuerpo */
 body {
-    background-color: gray;
+    background-color: aqua;
     background-color: azure; 
 }
 
 /* Estilos para el encabezado */
 header {
-    background-color:rgb(33, 33, 33);
+    background-color: rosybrown;
     text-align: center;
     padding: 20px;
 }
 
 header h1 {
-    color: black;
+    color: white;
 }
 
 /* Estilos para el aside */
@@ -102,22 +102,3 @@ footer {
     background-color: yellow;
   }
 
-  .Apela {
-    color: white;
-  }
-  
-  .C {
-    color: blue;
-  }
-  
-  .R {
-    color: red;
-  }
-  footer {
-    background-color: gray; 
-    text-align: center;
-    padding: 10px;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-}
