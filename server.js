@@ -6,7 +6,7 @@ const bodyParser = require('body-parser');
 
 //Se llama a express, se establece el puerto y la ruta a la carpeta public.
 const app = express();
-const PORT = 3000;
+const PORT = 3001;
 const PUBLIC = path.join(__dirname, 'public');
 
 // Se crea el arreglo con los datos fijos para poder visualizarlos al iniciar la pagina web
